@@ -22,7 +22,13 @@ Install [Homebrew](https://brew.sh), then run these commands:
 brew install ffmpeg 7z git
 git clone https://github.com/illixion/StreamDeck-Animated-Screensaver.git
 cd StreamDeck-Animated-Screensaver
+
 ./elgatoscreensaver.sh /path/to/video.mp4
+
+# You can also drag the file into the terminal window to paste the path
+
+# To open the resulting file:
+open *.streamDeckProfile
 ```
 
 ### Windows (and Linux)
@@ -37,7 +43,7 @@ git clone https://github.com/illixion/StreamDeck-Animated-Screensaver.git
 cd StreamDeck-Animated-Screensaver
 ./elgatoscreensaver.sh $(wslpath "$(wslvar USERPROFILE)")/Desktop/video.mp4
 
-# To move the resulting file back to your Desktop
+# To move the resulting file back to your Desktop:
 mv *.streamDeckProfile $(wslpath "$(wslvar USERPROFILE)")/Desktop/
 ```
 
