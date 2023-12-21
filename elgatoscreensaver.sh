@@ -28,7 +28,7 @@ output_dir="./tmp"
 template_dir="./template"
 
 # Create output directory if it doesn't exist
-rm -r "$output_dir" 2>/dev/null
+rm -r "$output_dir" 2>/dev/null || true
 mkdir -p "$output_dir"
 
 # Get video width and height
@@ -65,7 +65,7 @@ done
 
 # Create a copy of the template directory
 template_copy="$(basename "$template_dir")-copy"
-rm -r "$template_copy" 2>/dev/null
+rm -r "$template_copy" 2>/dev/null || true
 cp -cr "$template_dir" "$template_copy"
 
 # Replace the template's image files with the generated webp files
@@ -87,4 +87,4 @@ cd "$template_copy"
 
 # Clean up temporary files
 cd ..
-rm -r "$output_dir" "$template_copy" 2>/dev/null
+rm -r "$output_dir" "$template_copy" 2>/dev/null || true

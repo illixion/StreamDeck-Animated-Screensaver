@@ -2,6 +2,10 @@
 
 This project allows you to create an animated wallpaper that you can set up on your Elgato Stream Deck as a preset, and switch to it using a button. This is the same as the paid screensavers that you can get on the Elgato marketplace, but you can use your own videos with this project.
 
+Any video format that ffmpeg understands is supported.
+
+Please note that pressing any buttons while the screensaver is active will automatically switch to the next preset, so you'll want to ensure that the screensaver is last in the preset list. If this isn't desired, advanced users can also modify the `ProfileUUID` values in `template/91EBCF7F-C727-43EF-BE2F-58EE5B617867.sdProfile/Profiles/CS3KF237953I337M0QTB32DD3KZ/manifest.json` to use the UUID of your preferred preset, which you can find by exporting a preset that contains a "Switch Profile" button with your desired preset. The presets that the Elgato app saves are just ZIP archives with JSON files inside.
+
 ## Usage
 
 ### Linux/macOS
