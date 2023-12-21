@@ -41,7 +41,9 @@ sudo apt install --no-install-recommends wslu
 sudo apt install ffmpeg p7zip-full git
 git clone https://github.com/illixion/StreamDeck-Animated-Screensaver.git
 cd StreamDeck-Animated-Screensaver
-./elgatoscreensaver.sh $(wslpath "$(wslvar USERPROFILE)")/Desktop/video.mp4
+
+# Put the video on your desktop and change video.mp4 to the correct file name
+./elgatoscreensaver.sh "$(wslpath "$(wslvar USERPROFILE)")/Desktop/video.mp4"
 
 # To move the resulting file back to your Desktop:
 mv *.streamDeckProfile $(wslpath "$(wslvar USERPROFILE)")/Desktop/

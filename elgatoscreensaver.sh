@@ -66,7 +66,7 @@ done
 # Create a copy of the template directory
 template_copy="$(basename "$template_dir")-copy"
 rm -r "$template_copy" 2>/dev/null || true
-cp -cr "$template_dir" "$template_copy"
+cp -r "$template_dir" "$template_copy"
 
 # Replace the template's image files with the generated webp files
 for i in $(seq 0 4); do
@@ -78,7 +78,12 @@ for i in $(seq 0 4); do
 done
 
 # Replace "FILENAME" with the input video's file name in the template's manifest.json
-sed -i "" "s/FILENAME/$input_video_name/" "$template_copy/91EBCF7F-C727-43EF-BE2F-58EE5B617867.sdProfile/manifest.json"
+# Also ensure sed works on both macOS and Linux
+if [ "$(uname)" == "Darwin" ]; then
+    sed -i "" "s/FILENAME/$input_video_name/" "$template_copy/91EBCF7F-C727-43EF-BE2F-58EE5B617867.sdProfile/manifest.json"
+else
+    sed -i "s/FILENAME/$input_video_name/" "$template_copy/91EBCF7F-C727-43EF-BE2F-58EE5B617867.sdProfile/manifest.json"
+fi
 
 # Create a ZIP file using 7z
 output_zip="${input_video_name}.streamDeckProfile"
