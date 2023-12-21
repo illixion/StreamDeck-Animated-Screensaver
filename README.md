@@ -14,23 +14,6 @@ If this isn't desired, you can manually change which preset is used for each key
 
 ## Usage
 
-### macOS
-
-Install [Homebrew](https://brew.sh), then run these commands:
-
-```sh
-brew install ffmpeg 7z git
-git clone https://github.com/illixion/StreamDeck-Animated-Screensaver.git
-cd StreamDeck-Animated-Screensaver
-
-./elgatoscreensaver.sh /path/to/video.mp4
-
-# You can also drag the file into the terminal window to paste the path
-
-# To open the resulting file:
-open *.streamDeckProfile
-```
-
 ### Windows (and Linux)
 
 [Set up WSL and install Ubuntu from the Windows Store](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview), then once that's done, run these commands:
@@ -47,6 +30,23 @@ cd StreamDeck-Animated-Screensaver
 
 # To move the resulting file back to your Desktop:
 mv *.streamDeckProfile $(wslpath "$(wslvar USERPROFILE)")/Desktop/
+```
+
+### macOS
+
+Install [Homebrew](https://brew.sh), then run these commands:
+
+```sh
+brew install ffmpeg 7z git
+git clone https://github.com/illixion/StreamDeck-Animated-Screensaver.git
+cd StreamDeck-Animated-Screensaver
+
+./elgatoscreensaver.sh /path/to/video.mp4
+
+# You can also drag the file into the terminal window to paste the path
+
+# To open the resulting file:
+open *.streamDeckProfile
 ```
 
 The resulting preset file will be saved in the **same folder as the script**, which you can then open using the Elgato Stream Deck software, and assign a "Switch Profile" action to switch to the preset containing the screensaver.
