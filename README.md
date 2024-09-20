@@ -32,6 +32,11 @@ cd StreamDeck-Animated-Screensaver
 mv *.streamDeckProfile $(wslpath "$(wslvar USERPROFILE)")/Desktop/
 ```
 
+If you want to generate a screensaver for un Stream Deck XL add XL at the end of the cli:
+```sh
+./elgatoscreensaver.sh "$(wslpath "$(wslvar USERPROFILE)")/Desktop/video.mp4" XL
+```
+
 ### macOS
 
 Install [Homebrew](https://brew.sh), then run these commands:
