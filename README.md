@@ -2,7 +2,7 @@
 
 This project allows you to create an animated wallpaper that you can set up on your Elgato Stream Deck as a preset, and switch to it using a button. This is the same as the screensavers that you can get on the [Elgato Marketplace](https://marketplace.elgato.com/stream-deck/screensavers), but you can use your own videos with this project.
 
-Any video format that ffmpeg understands is supported.
+Any video format that ffmpeg understands is supported. Any video height or width should work, however the script is designed to work best with 5:3 aspect ratio (or 1:2 on StreamDeck XL). I've tested as many edge cases as I could think of, but if you have a video that is failing to process, please let me know by opening an issue.
 
 ## How this works
 
