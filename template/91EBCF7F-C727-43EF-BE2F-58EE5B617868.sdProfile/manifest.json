@@ -1,0 +1,14 @@
+{
+    "Device": {
+        "Model": "20GBA9901",
+        "UUID": ""
+    },
+    "Name": "FILENAME",
+    "Pages": {
+        "Current": "67074788-6749-4721-8cf6-06bab189ad1d",
+        "Pages": [
+            "67074788-6749-4721-8cf6-06bab189ad1d"
+        ]
+    },
+    "Version": "2.0"
+}
