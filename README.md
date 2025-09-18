@@ -63,4 +63,4 @@ The resulting preset file will be saved in the **same folder as the script**, wh
 
 ## Licensing
 
-This project is licensed under [Affero GPL](https://github.com/illixion/StreamDeck-Animated-Screensaver/blob/main/LICENSE.txt). We also offer to provide this software under an MIT license upon request.
+This project is licensed under [MIT](https://github.com/illixion/StreamDeck-Animated-Screensaver/blob/main/LICENSE.txt).
